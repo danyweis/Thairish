@@ -14,16 +14,22 @@ p, a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Yesteryear", cursive;
   color: #c6a07c;
 }
 
 h1 {
+  font-family: "Yesteryear", cursive;
   font-size: 55px;
 }
 
 h2 {
+  font-family: "Yesteryear", cursive;
   font-size: 40px;
+}
+
+h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-family-font-size: 35px;
 }
 
 a {
@@ -68,7 +74,7 @@ li {
 }
 
 .hero {
-  height: 750px;
+  height: 100vh;
   width: 100%;
   background: url("/img/chilli.jpg");
   background-position: bottom right;
@@ -78,7 +84,7 @@ li {
 }
 
 .moto {
-  height: calc(750px - 86px);
+  height: calc(100vh - 86px);
   color: #c6a07c;
   display: flex;
   align-items: center;
@@ -86,19 +92,102 @@ li {
 
 .aboutDivider {
   display: flex;
+  position: relative;
+  margin-bottom: 100px;
 }
 
 .aboutText {
-  width: 550px;
+  width: 500px;
   margin-left: 40px;
   position: relative;
-  margin-top: 100px;
+  margin-top: 150px;
   text-align: justify;
 }
 .aboutText h2 {
   position: absolute;
   top: -70px;
   left: 150px;
+}
+
+.openingPicture {
+  position: absolute;
+  left: 600px;
+  top: -150px;
+  height: 1100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.opening {
+  width: 350px;
+  height: 350px;
+  padding: 15px;
+  color: #e1e5c6;
+  background: #161825;
+}
+
+.openingHours, .address {
+  text-transform: uppercase;
+}
+
+.timesBlock {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.times {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timesUp {
+  margin-top: 15px;
+}
+
+.linkBox {
+  width: 100%;
+  text-align: center;
+}
+
+.linkBox:hover {
+  transform: scale(1.2);
+}
+
+.linkMaps {
+  text-decoration: underline;
+}
+
+.picture1 {
+  background: url("https://picsum.photos/350/250/?random");
+  background-repeat: no-repeat;
+  height: 250px;
+}
+
+.picture2 {
+  background: url("https://picsum.photos/350/250?random");
+  height: 250px;
+}
+
+.breacker {
+  width: 100%;
+  height: 300px;
+  background: url("../img/breackerPlaceholder.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#menu {
+  height: 100vh;
+  background: #161825;
+  color: #e1e5c6;
+  padding-top: 75px;
 }
 
 /*# sourceMappingURL=style.css.map */

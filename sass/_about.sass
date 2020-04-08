@@ -1,15 +1,72 @@
 .aboutDivider
     display: flex
+    position: relative
+    margin-bottom: 100px
 
 
 .aboutText
-    width: 550px
+    width: 500px
     margin-left: 40px
     position: relative
-    margin-top: 100px
+    margin-top: 150px
     text-align: justify
     h2
         position: absolute
         top: -70px
         left: 150px
-      
+
+.openingPicture
+    position: absolute
+    left: 600px
+    top:-150px
+    height: 1100px 
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    // background: pink
+
+.opening
+    width: 350px
+    height: 350px
+    padding: 15px
+    color: $cWriten
+    background: $dBG
+
+.openingHours, .address
+    text-transform: uppercase 
+
+.timesBlock
+    height: 300px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.times
+    width: 100%
+    height: 30px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.timesUp
+    margin-top: 15px
+
+.linkBox
+    width: 100%
+    text-align: center
+
+.linkBox:hover
+    transform: $scaleLink
+
+.linkMaps
+    text-decoration: underline
+
+.picture1
+    background: url('https://picsum.photos/350/250/?random')
+    // background-attachment: fixed
+    background-repeat: no-repeat
+    height: 250px
+
+.picture2
+    background: url('https://picsum.photos/350/250?random')
+    height: 250px
