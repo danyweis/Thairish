@@ -10,5 +10,15 @@
 .moto
     height: calc(100vh - 86px)
     color: $cream
+    opacity: 0
     display: flex
     align-items: center
+    animation: fadein 2s forwards
+    animation-delay: 1s
+
+
+@keyframes fadein 
+    from  
+        opacity: 0 
+    to    
+        opacity: 1 

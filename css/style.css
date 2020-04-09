@@ -53,9 +53,9 @@ li {
 .navbar {
   padding: 5px 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
-  border-bottom: 2px solid #c5c6bc;
+  border-bottom: 2px solid #f5f5e9;
   position: fixed;
   z-index: 10;
 }
@@ -94,14 +94,29 @@ li {
 .moto {
   height: calc(100vh - 86px);
   color: #c6a07c;
+  opacity: 0;
   display: flex;
   align-items: center;
+  animation: fadein 2s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#about {
+  background: #f5f5e9;
+  height: 1000px;
 }
 
 .aboutDivider {
   display: flex;
   position: relative;
-  margin-bottom: 100px;
 }
 
 .aboutText {
@@ -121,7 +136,7 @@ li {
   position: absolute;
   left: 600px;
   top: -150px;
-  height: 1000px;
+  height: 1100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -183,11 +198,15 @@ li {
 
 .breacker {
   width: 100%;
+  height: 300px;
+  background-image: linear-gradient(#f5f5e9, #161825);
 }
 
 .imgBox {
+  height: 300px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .imgBreak {
@@ -219,6 +238,7 @@ li {
   background: #161825;
   color: #e1e5c6;
   padding-top: 75px;
+  padding-bottom: 50px;
 }
 
 .ourMenu, .allergenTitle {
@@ -250,7 +270,7 @@ li {
 
 .left, .right {
   padding: 10px;
-  border-left: 2px solid #c5c6bc;
+  border-left: 2px solid #f5f5e9;
 }
 
 .left {
@@ -267,6 +287,53 @@ li {
 
 .menuPrice {
   margin-top: 5px;
+}
+
+#contact {
+  background: #f5f5e9;
+}
+
+.contactDivider {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.contactDetails {
+  width: 400px;
+}
+
+footer {
+  height: 50px;
+  width: 100%;
+  background: #161825;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+}
+
+.dc {
+  font-size: 16px;
+}
+.dc .mailme {
+  font-size: 12px;
+}
+
+.close::before {
+  content: "Close ";
+}
+
+.disclamer {
+  width: 960px;
+  padding: 25px;
+  margin: auto;
+  text-align: justify;
+  display: none;
+}
+
+.open {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
