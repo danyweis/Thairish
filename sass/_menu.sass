@@ -1,5 +1,43 @@
 #menu
-    height: 100vh
+    min-height: 100vh
     background: $dBG
     color: $cWriten
     padding-top: 75px
+
+.ourMenu, .allergenTitle
+    text-align: center
+
+.allergenList
+    width: 100%
+    display: flex
+    justify-content: space-around
+
+.menu
+    padding-bottom: 10px
+
+.breakfast, .starter, .main, .thaiMenu, .soupSandwich, .dessert
+    display: grid
+    grid-template-columns: 1fr 5fr 5fr 1fr
+    grid-gap: 10px
+
+.full
+    width: 100%
+    grid-column: 2/4
+    text-align: center
+    padding: 10px
+
+.left, .right
+    padding: 10px
+    border-left: $cBorder
+
+.left
+    grid-column: 2/3
+   
+.right
+    grid-column: 3/4
+
+.menuNumbers, .menuPrice
+    color: $cream
+
+.menuPrice
+    margin-top: 5px

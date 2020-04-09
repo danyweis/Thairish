@@ -3,15 +3,22 @@
     display: flex
     justify-content: space-between
     width: 100%
-    border-bottom: 2px solid $cBG 
-    .navLogo
-        height: 70px
-    .linkList
-        width: 50%
-        display: flex
-        justify-content: space-between
-        align-items: center
-        .link>a
-            text-transform: uppercase
-        .link:hover
-            transform: $scaleLink
+    border-bottom: $cBorder 
+    position: fixed
+    z-index: 10
+    // background: $dBG 
+
+.active
+    background: $dBG    
+
+.navLogo
+    height: 70px
+.linkList
+    width: 50%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .link>a
+        text-transform: uppercase
+    .link:hover
+        transform: $scaleLink

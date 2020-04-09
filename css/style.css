@@ -18,18 +18,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-family: "Yesteryear", cursive;
+  font-family: "Yesteryear", serif;
   font-size: 55px;
 }
 
 h2 {
-  font-family: "Yesteryear", cursive;
-  font-size: 40px;
+  font-family: "Yesteryear", serif;
+  font-size: 45px;
 }
 
 h3 {
-  font-family: "Ubuntu", sans-serif;
-  font-family-font-size: 35px;
+  font-family: "Yesteryear", serif;
+  font-size: 40px;
 }
 
 a {
@@ -56,20 +56,28 @@ li {
   justify-content: space-between;
   width: 100%;
   border-bottom: 2px solid #c5c6bc;
+  position: fixed;
+  z-index: 10;
 }
-.navbar .navLogo {
+
+.active {
+  background: #161825;
+}
+
+.navLogo {
   height: 70px;
 }
-.navbar .linkList {
+
+.linkList {
   width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.navbar .linkList .link > a {
+.linkList .link > a {
   text-transform: uppercase;
 }
-.navbar .linkList .link:hover {
+.linkList .link:hover {
   transform: scale(1.2);
 }
 
@@ -113,7 +121,7 @@ li {
   position: absolute;
   left: 600px;
   top: -150px;
-  height: 1100px;
+  height: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -164,30 +172,101 @@ li {
 }
 
 .picture1 {
-  background: url("https://picsum.photos/350/250/?random");
-  background-repeat: no-repeat;
+  background-image: linear-gradient(45deg, green, blue);
   height: 250px;
 }
 
 .picture2 {
-  background: url("https://picsum.photos/350/250?random");
+  background: linear-gradient(45deg, #bada55, #f02255);
   height: 250px;
 }
 
 .breacker {
   width: 100%;
-  height: 300px;
-  background: url("../img/breackerPlaceholder.jpg");
-  background-position: bottom;
-  background-size: cover;
+}
+
+.imgBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imgBreak {
+  width: 220px;
+  height: 220px;
+  background-size: contain;
   background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+
+.imgBreak1 {
+  background-image: url("../img/food/brie.png");
+}
+
+.imgBreak2 {
+  background-image: url("../img/food/burger.png");
+}
+
+.imgBreak3 {
+  background-image: url("../img/food/soupSandwich.png");
+}
+
+.imgBreak4 {
+  background-image: url("../img/food/wbmSalad.png");
 }
 
 #menu {
-  height: 100vh;
+  min-height: 100vh;
   background: #161825;
   color: #e1e5c6;
   padding-top: 75px;
+}
+
+.ourMenu, .allergenTitle {
+  text-align: center;
+}
+
+.allergenList {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu {
+  padding-bottom: 10px;
+}
+
+.breakfast, .starter, .main, .thaiMenu, .soupSandwich, .dessert {
+  display: grid;
+  grid-template-columns: 1fr 5fr 5fr 1fr;
+  grid-gap: 10px;
+}
+
+.full {
+  width: 100%;
+  grid-column: 2/4;
+  text-align: center;
+  padding: 10px;
+}
+
+.left, .right {
+  padding: 10px;
+  border-left: 2px solid #c5c6bc;
+}
+
+.left {
+  grid-column: 2/3;
+}
+
+.right {
+  grid-column: 3/4;
+}
+
+.menuNumbers, .menuPrice {
+  color: #c6a07c;
+}
+
+.menuPrice {
+  margin-top: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
