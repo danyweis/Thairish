@@ -1,7 +1,7 @@
 const disclamerLink = document.querySelector('.disclamerLink');
 const disclamer = document.querySelector('.disclamer')
 
-window.onclick = function(){
+disclamerLink .onclick = function(){
     if(disclamerLink.classList.contains('close')){
         disclamerLink.classList.remove('close')
         disclamer.classList.remove('open')
@@ -10,3 +10,4 @@ window.onclick = function(){
         disclamer.classList.add('open')
     }
 }
+

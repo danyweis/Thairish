@@ -98,7 +98,7 @@ li {
   display: flex;
   align-items: center;
   animation: fadein 2s forwards;
-  animation-delay: 1s;
+  animation-delay: 500;
 }
 
 @keyframes fadein {
@@ -119,12 +119,28 @@ li {
   position: relative;
 }
 
-.aboutText {
+.aboutHidden {
   width: 500px;
   margin-left: 40px;
   position: relative;
   margin-top: 150px;
   text-align: justify;
+  opacity: 0;
+}
+.aboutHidden h2 {
+  position: absolute;
+  top: -70px;
+  left: 150px;
+}
+
+.aboutText {
+  width: 500px;
+  margin-left: 40px;
+  opacity: 0;
+  position: relative;
+  margin-top: 150px;
+  text-align: justify;
+  animation: aboutFade 2s forwards;
 }
 .aboutText h2 {
   position: absolute;
@@ -132,6 +148,14 @@ li {
   left: 150px;
 }
 
+@keyframes aboutFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .openingPicture {
   position: absolute;
   left: 600px;
@@ -189,13 +213,28 @@ li {
 .picture1 {
   background-image: linear-gradient(45deg, green, blue);
   height: 250px;
+  opacity: 0;
 }
 
 .picture2 {
   background: linear-gradient(45deg, #bada55, #f02255);
   height: 250px;
+  opacity: 0;
 }
 
+.picture {
+  opacity: 1;
+  animation: fadein 2s forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .breacker {
   width: 100%;
   height: 300px;
