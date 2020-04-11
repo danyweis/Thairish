@@ -6,20 +6,20 @@
     display: flex
     position: relative
 
-// ABOUTHIDDEN
+
 .aboutHidden
-    width: 500px
+    // width: 500px
     margin-left: 40px
     position: relative
     margin-top: 150px
-    text-align: justify
+    // text-align: justify
     opacity: 0
     h2
         position: absolute
         top: -70px
         left: 150px
 
-// ORIGINAL GETS ACTIVATED BY JS
+// GETS ACTIVATED BY JS
 
 .aboutText
     width: 500px
@@ -28,50 +28,49 @@
     position: relative
     margin-top: 150px
     text-align: justify
-    animation: aboutFade 2s forwards
+    animation: aboutTextAnimation 1.2s forwards 0s ease-in-out
     h2
         position: absolute
         top: -70px
         left: 150px
 
-@keyframes aboutFade
+@keyframes aboutTextAnimation
     0%
+        transform: translateX(-100%)
         opacity: 0
+        
     100%
-        opacity: 1
+        transform: translateX(0)
+        opacity: 1        
 
 
 .openingPicture
     position: absolute
     left: 600px
-    top:-150px
+    top: -150px
     height: 1100px 
     display: flex
     flex-direction: column
     justify-content: space-between
 
+
 .opening
-    width: 350px
     height: 350px
+    width: 350px
     padding: 15px
     color: $cWriten
     background: $dBG
+    display: grid
+    grid-template-rows: 1fr 2fr 1fr 2fr 1fr
+    grid-template-rows: auto auto
+    
 
 .openingHours, .address
     text-transform: uppercase 
 
-.timesBlock
-    height: 300px
-    display: flex
-    flex-direction: column
-    justify-content: space-between
+.timesTime
+    float: right
 
-.times
-    width: 100%
-    height: 30px
-    display: flex
-    justify-content: space-between
-    align-items: center
 
 .timesUp
     margin-top: 15px
@@ -97,12 +96,30 @@
     height: 250px
     opacity: 0
 
+// GETS ACTIVATED BY JS
+
 .picture
     opacity: 1
-    animation: fadein 2s forwards
+    animation: aboutPictureAnimation 1.2s forwards 0s ease-in-out
 
-@keyframes fadein 
-    from  
-        opacity: 0 
-    to    
+@keyframes aboutPictureAnimation
+    0%
+        transform: translateX(100%)
+        opacity: 0
+        
+    100%
+        transform: translateX(0)
+        opacity: 1 
+
+.picture3
+    opacity: 1
+    animation: aboutPictureFromLeftAnimation 1.2s forwards 0s ease-in-out
+
+@keyframes aboutPictureFromLeftAnimation
+    0%
+        transform: translateX(-100%)
+        opacity: 0
+        
+    100%
+        transform: translateX(0)
         opacity: 1 

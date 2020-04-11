@@ -3,6 +3,7 @@ const aboutHidden = document.querySelector('.aboutHidden');
 const height = document.documentElement.clientHeight;
 const pic1 = document.querySelector('.picture1');
 const pic2 = document.querySelector('.picture2');
+const width = window.innerWidth;
 
 
 window.onscroll = function () {
@@ -18,15 +19,20 @@ window.onscroll = function () {
 
     //  ABOUT EASE IN 
 
-    if (scrolled >= height / 3) {
+    if (width > 960 && scrolled >= height / 3) {
         aboutHidden.classList.add('aboutText')    
+    } else if(width <= 960 && width > 720 && scrolled >= height/2){
+        aboutHidden.classList.add('aboutText')
     }
 
-    if(scrolled >= height/2) {
+    if(width > 960 && scrolled >= height/2) {
         pic1.classList.add('picture')
-    }
+    } else if(width <= 960 && width > 720 && scrolled >= 150){
+        pic1.classList.add('picture3')
+        pic2.classList.add('picture')
+    } 
 
-    if(scrolled >= height) {
+    if(width > 960 && scrolled >= height) {
         pic2.classList.add('picture')
     }
 

@@ -1,0 +1,94 @@
+@media ( max-width: 960px )
+    h1
+        font-size: 45px
+
+    h2
+        font-size: 35px
+
+    h3
+        font-size: 30px
+
+    .content
+        width: 720px
+        margin: 0
+
+    .aboutDivider
+        display: flex
+        flex-direction: column-reverse
+
+    .aboutHidden
+        margin-top: 0px
+        margin-left: 0px
+        padding: 15px
+        position: relative
+        opacity: 0
+        h2
+            position: relative
+            width: 50%
+            top: 0px
+            left: 150px
+
+
+    .aboutText
+        width: 100%
+        opacity: 0
+        position: relative
+        text-align: justify
+        animation: aboutTextAnimation 1.2s forwards 0s ease-in-out
+        h2
+            left: 150px
+
+    
+        
+    .opening
+        position: absolute
+        display: grid
+        grid-template-columns: 2fr 1fr 2fr
+        width: 670px
+        height: 150px
+        left: 0px
+
+    .openingHours
+        grid-row: 1/2
+    .timesUp
+        grid-row: 2/3
+        grid-column:1/3
+    .timesDown
+         grid-row: 3/4
+         grid-column:1/3 
+    .address
+        grid-column:3/4 
+        grid-row: 1/2
+    
+    .opening>p
+        grid-column:3/4 
+        grid-row: 2/4
+    .linkBox
+       display: none
+
+    .timesTime
+        margin-right: 15px
+    
+    .openingPicture
+        position: relative
+        left: 0
+        height: 350px
+        display: grid
+        grid-template-rows: 150px 30px 250px
+        grid-template-columns: 300px 20px 300px
+        margin-left: 50px
+    .picture
+        width: 300px
+    
+    .picture1
+        grid-row: 3/4
+    
+    .picture2
+        grid-row: 3/4
+        grid-column: 3/4
+
+    .disclamer
+        width: 720px
+        padding: 25px
+
+// @media ( max-width: 720px )
