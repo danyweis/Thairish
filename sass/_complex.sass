@@ -1,0 +1,120 @@
+// HERE IS THE FULL MOBILE NAVBAR
+
+@media ( max-width: 720px )
+    body
+        max-width: 100vw
+    .content
+        max-width: 100vw
+        
+    .burgerBox
+        width: 65px
+        height: 60px
+        background: pink
+        position: fixed
+        top: 15px
+        right: 15px
+
+    .burgerBeforeAfter
+        height: 100%
+        width: 100%
+        background: #bada55
+        position: relative
+
+    .burger
+        width: 50px
+        height: 5px
+        background: green
+        position: absolute
+        top: calc(50% - 2.5px)
+        left: calc((100% - 50px) / 2)
+        animation: burgerAnimation 2s forwards 0s linear
+        
+        &::before
+            content: ""
+            width: 50px
+            height: 5px
+            background: red
+            position: absolute
+            top: 15px
+            animation: beforeAnimation 2s forwards 0s linear
+        
+        &::after
+            content: ""
+            width: 50px
+            height: 5px
+            background: blue
+            position: absolute
+            top: -15px
+            animation: afterAnimation 2s forwards 0s linear 
+            // animation-direction: reverse
+        
+            // animation: yourAnimation 1s forwards 0s linear
+            
+    @keyframes beforeAnimation
+        0%
+            
+        50%
+            transform: rotate(0deg)
+            top: 0
+    
+        100%
+            transform: rotate(90deg)
+            top: 0
+    
+    @keyframes afterAnimation
+        0%
+
+        50%
+            transform: rotate(0deg)
+            top: 0
+    
+        100%
+            transform: rotate(90deg)
+            top: 0
+
+    @keyframes burgerAnimation
+        0%
+
+        50%
+            transform: rotate(0deg)
+    
+        100%
+            transform: rotate(45deg)
+
+    .navLogo
+        height: 50px
+
+    .navbar
+        padding: 0px 0px
+        display: block
+        
+        max-width: 100vw
+       
+        position: fixed
+        // z-index: 10
+        // background: $dBG 
+
+    .linkList
+        display: none
+
+    .opening
+        display: none
+    
+    .disclamer
+        max-width: 100vw
+    
+    #maps
+        max-width: 100px
+
+
+    #contact
+        display: none
+
+    .openingPicture
+        position: absolute
+        left: 0px
+        top: -150px
+        height: 1100px 
+        display: flex
+        flex-direction: column
+        justify-content: space-between
