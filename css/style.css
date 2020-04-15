@@ -657,166 +657,36 @@ footer {
   .burgerBox {
     width: 65px;
     height: 60px;
-    background: pink;
     position: fixed;
-    top: 15px;
-    right: 15px;
+    top: 5px;
+    right: 5px;
+    z-index: 15;
+    border: 1px solid #f5f5e9;
+    border-radius: 5px;
   }
   .burgerBeforeAfter {
     height: 100%;
     width: 100%;
-    background: #bada55;
     position: relative;
   }
-  .burger {
+  .burgerBeforeAfter:hover {
+    cursor: pointer;
+  }
+  .line1, .line2, .line3 {
     width: 50px;
     height: 5px;
-    background: green;
+    background: #f5f5e9;
     position: absolute;
-    top: calc(50% - 2.5px);
     left: calc((100% - 50px) / 2);
-    -webkit-animation: burgerAnimation 2s forwards 0s linear;
-            animation: burgerAnimation 2s forwards 0s linear;
   }
-  .burger::before {
-    content: "";
-    width: 50px;
-    height: 5px;
-    background: red;
-    position: absolute;
-    top: 15px;
-    -webkit-animation: beforeAnimation 2s forwards 0s linear;
-            animation: beforeAnimation 2s forwards 0s linear;
+  .line1 {
+    top: calc(25% - 2.5px);
   }
-  .burger::after {
-    content: "";
-    width: 50px;
-    height: 5px;
-    background: blue;
-    position: absolute;
-    top: -15px;
-    -webkit-animation: afterAnimation 2s forwards 0s linear;
-            animation: afterAnimation 2s forwards 0s linear;
+  .line2 {
+    top: calc(50% - 2.5px);
   }
-  @-webkit-keyframes beforeAnimation {
-    0% {
-    }
-    50% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      top: 0;
-    }
-    100% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-      top: 0;
-    }
-  }
-  @keyframes beforeAnimation {
-    0% {
-    }
-    50% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      top: 0;
-    }
-    100% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-      top: 0;
-    }
-  }
-  @-webkit-keyframes afterAnimation {
-    0% {
-    }
-    50% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      top: 0;
-    }
-    100% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-      top: 0;
-    }
-  }
-  @keyframes afterAnimation {
-    0% {
-    }
-    50% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-      top: 0;
-    }
-    100% {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg);
-      top: 0;
-    }
-  }
-  @-webkit-keyframes burgerAnimation {
-    0% {
-    }
-    50% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(45deg);
-              transform: rotate(45deg);
-    }
-  }
-  @keyframes burgerAnimation {
-    0% {
-    }
-    50% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(45deg);
-              transform: rotate(45deg);
-    }
-  }
-  .navLogo {
-    height: 50px;
-  }
-  .navbar {
-    padding: 0px 0px;
-    display: block;
-    max-width: 100vw;
-    position: fixed;
-  }
-  .linkList {
-    display: none;
-  }
-  .opening {
-    display: none;
-  }
-  .disclamer {
-    max-width: 100vw;
-  }
-  #maps {
-    max-width: 100px;
-  }
-  #contact {
-    display: none;
-  }
-  .openingPicture {
-    position: absolute;
-    left: 0px;
-    top: -150px;
-    height: 1100px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .line3 {
+    top: calc(75% - 2.5px);
   }
 }
 /*# sourceMappingURL=style.css.map */
