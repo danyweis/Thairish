@@ -4,6 +4,8 @@ const height = document.documentElement.clientHeight;
 const pic1 = document.querySelector('.picture1');
 const pic2 = document.querySelector('.picture2');
 const width = window.innerWidth;
+const backup = document.querySelector('.backUp');
+
 
 
 
@@ -42,6 +44,14 @@ window.onscroll = function () {
         pic2.classList.add('picture')
     }
 
+
+// BACKUP
+    if (scrolled >= height / 2){
+        backup.classList.add('backUpActive');
+    } else {
+        backup.classList.remove('backUpActive')
+    }
+
 }
 
 
@@ -50,20 +60,32 @@ const navSlide = () => {
     const linkList = document.querySelector('.linkList');
     const link = document.querySelectorAll('.linkList li a');
 
+    let closing = () => { link.forEach(function (x, index) {
+        if (x.style.animation) {
+            x.style.animation = "";
+        } else {
+            x.style.animation = `linkMove 0.5s ease-in forwards ${index / 7 + 0.2}s`
+        }
+    });
+}
+
+
     burgerBox.addEventListener('click', function () {
 
         linkList.classList.toggle('navActive')
 
-        link.forEach(function (x, index) {
-            if (x.style.animation) {
-                x.style.animation = "";
-            } else {
-                x.style.animation = `linkMove 0.5s ease-in forwards ${index / 5 + 0.2}s`
-            }
-        });
+        closing()
 
         burgerBox.classList.toggle('burger');
 
+    });
+
+    linkList.addEventListener('click', function() {
+        linkList.classList.toggle('navActive');
+
+        closing()
+
+        burgerBox.classList.toggle('burger');
     });
 };
 
